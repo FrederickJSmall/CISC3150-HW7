@@ -63,7 +63,7 @@ public class TreeDiagram {
 					}
 					
 					System.out.println(path);
-					writer.write(path);
+					writer.write(path + "\n");
 
 					displaySubTree(fullPath,level);
 				}
