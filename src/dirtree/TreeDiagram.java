@@ -19,10 +19,11 @@ public class TreeDiagram {
 				File checkfile = new File(fullPath);
 				if (checkfile.isDirectory() == true)
 				{
-					System.out.printf("%10d",level);
-					for (int i=0;i<level;i++)
-						System.out.print("-");
-					System.out.print("|");
+					System.out.printf("%010d ",level);
+					for (int i=1;i<level;i++)
+						System.out.print("   ");
+					
+					System.out.print("|---");
 					System.out.println(path);
 					tree(fullPath,level);
 				}
