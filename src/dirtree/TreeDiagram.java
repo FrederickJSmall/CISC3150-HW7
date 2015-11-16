@@ -23,10 +23,12 @@ public class TreeDiagram {
 		System.out.printf(message);
 		writer.write(message);
 		displaySubTree(rootDirectory,level);
+		//System.out.printf("Directories=%d",directories);
 	}
 	public void displaySubTree(String rootDirectory,int level) throws IOException
 	{
 			level++;
+            //int directories = 0;
 			File file = new File(rootDirectory);
 			
 			String[] fileList = file.list();
@@ -39,7 +41,7 @@ public class TreeDiagram {
 				File checkfile = new File(fullPath);
 				if (checkfile.isDirectory() == true)
 				{
-					String message = String.format("%010d|",level);
+					String message = String.format("%05d|",level);
 					System.out.printf(message);
 					writer.write(message);
 					for (int i=1;i<level;i++)
@@ -66,8 +68,10 @@ public class TreeDiagram {
 					writer.write(path + "\n");
 
 					displaySubTree(fullPath,level);
+					//directories++;
 				}
 			}
+			//return directories;
 	}
 	//private void output(String message) throws IOException
 	//{

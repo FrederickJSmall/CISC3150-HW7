@@ -10,7 +10,7 @@ public class DirTree {
 		{
 		    //treeDiagram.tree("D:\\Projects",0);
 			treeDiagram.Open();
-			treeDiagram.tree("/Projects",0);
+			treeDiagram.tree("/.",0);
 			treeDiagram.Close();
 			treeDiagram = null;
 		}
